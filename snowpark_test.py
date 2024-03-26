@@ -6,7 +6,7 @@ from config import snowflake_conn_prop_local as snowflake_conn_prop
 
 def hello(session: Session) -> DataFrame:
     df = session.table("demodb.dev.customers")
-    #df = df.groupBy("STATE").count()
+    df = df.groupBy("STATE").count()
     return df
 
 # For local debugging
